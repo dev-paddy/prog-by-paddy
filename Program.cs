@@ -1,24 +1,25 @@
-﻿namespace CircleCalcProg;
+﻿namespace TriangleCalculator;
 
 class Program
 {
     static void Main(string[] args)
     {
-        //Declaring the constant PI and the variables radius, area and circumference
-        const Double PI = 3.14159;
-        Double radius, area, circumference;
+        //Declare variables for area, length and height as double types to allow for decimals
+        double area, length, height;
 
-        //User is prompted to enter the radius of the circle
-        Console.Write("Enter the radius of the circle: ");
-        //User input is stored in the variable radius which is a double type to allow for decimals
-        radius = Convert.ToDouble(Console.ReadLine());
+        //Prompt user to enter the length of the base of the triangle
+        Console.WriteLine("Enter the length of the base of the triangle: ");
+        //Read the user input and convert it to a double
+        length = Convert.ToDouble(Console.ReadLine());
+        //Prompt user to enter the height of the triangle
+        Console.WriteLine("\nEnter the height of the triangle: ");
+        //Read the user input and convert it to a double
+        height = Convert.ToDouble(Console.ReadLine());
 
-        //Calculating the area and circumference of the circle
-        area = PI * radius * radius;
-        circumference = 2 * PI * radius;
+        //Calculates area of the triangle
+        area = 0.5 * length * height;
 
-        //Output of calculated area and circumference
-        Console.WriteLine("\n\nThe area of the circle is: " + area);
-        Console.WriteLine("\n\nThe circumference of the circle is: " + circumference);
+        //Outputs area of triangle
+        Console.WriteLine("\n\nThe area of the triangle is " + area);
     }
 }
